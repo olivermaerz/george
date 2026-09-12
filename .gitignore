@@ -1,0 +1,101 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+Icon?
+
+# Xcode user state (personal paths, window layout — not for GitHub)
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+*.xcuserdatad/
+
+# Xcode / Swift build products
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.xcresult
+*.moved-aside
+.build/
+.swiftpm/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Legacy Xcode user files
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Distribution binaries (rebuild from source; do not commit)
+*.app
+*.dmg
+*.pkg
+
+# Apple code signing, provisioning, notarization
+# GitHub forbids private keys; Apple forbids redistributing these.
+*.p12
+*.pfx
+*.cer
+*.certSigningRequest
+*.mobileprovision
+*.provisionprofile
+*.p8
+AuthKey_*.p8
+*.key
+*.pem
+*.der
+private_keys/
+certificates/
+provisioning/
+notarization/
+*.notarization-log
+*.altool
+*.storekit
+ExportOptions.plist
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.secret
+secrets/
+credentials.json
+id_rsa
+id_ed25519
+*.keystore
+
+# Fastlane output
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+fastlane/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors / local tooling
+.idea/
+*.swp
+*~
+.vscode/
+.cursor/
