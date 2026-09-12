@@ -1,6 +1,6 @@
 import AppKit
+import Combine
 import CoreGraphics
-
 enum IdleClock {
     /// Same as `kCGAnyInputEventType` — last keyboard, mouse, or tablet input.
     private static let anyInput = CGEventType(rawValue: UInt32.max)!
