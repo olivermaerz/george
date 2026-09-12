@@ -59,8 +59,8 @@ def hum(seed: int) -> list[float]:
         wave1 = math.sin(2 * math.pi * freq * t)
         wave2 = 0.35 * math.sin(2 * math.pi * freq * 2 * t)
         wave3 = 0.12 * math.sin(2 * math.pi * freq * 3 * t)
-        nasel = 0.18 * math.sin(2 * math.pi * 240 * t) * env
-        samples.append((wave1 + wave2 + wave3 + nasel) * env * 0.34)
+        nasal = 0.18 * math.sin(2 * math.pi * 240 * t) * env
+        samples.append((wave1 + wave2 + wave3 + nasal) * env * 0.34)
     return samples
 
 
