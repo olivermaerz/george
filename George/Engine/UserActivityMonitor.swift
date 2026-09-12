@@ -20,6 +20,7 @@ final class UserActivityMonitor: ObservableObject {
     private var runSessionStart = Date.distantPast
     private var lastMouseLocation: CGPoint?
     private var monitors: [Any] = []
+    private let processID = Int64(ProcessInfo.processInfo.processIdentifier)
 
     var isSynthetic: Bool { syntheticDepth > 0 }
 
@@ -102,7 +103,12 @@ final class UserActivityMonitor: ObservableObject {
             }
         }
 
-        if isSynthetic || Date() < ignoreUntil {
+        if Date() < ignoreUntil {
+            return
+        }
+
+        if isSynthetic,
+           event.cgEvent?.getIntegerValueField(.eventSourceUnixProcessID) == processID {
             return
         }
 
