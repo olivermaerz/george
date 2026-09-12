@@ -188,11 +188,11 @@
 				CURRENT_PROJECT_VERSION = 2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = George;
+				INFOPLIST_KEY_CFBundleDisplayName = "George Is Looking Busy";
 				INFOPLIST_KEY_CFBundleIconName = AppIcon;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
-				INFOPLIST_KEY_NSAppleEventsUsageDescription = "George simulates mouse and keyboard activity that you configure.";
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "George Is Looking Busy simulates mouse and keyboard activity that you configure.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Oliver Maerz";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -221,11 +221,11 @@
 				CURRENT_PROJECT_VERSION = 2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = George;
+				INFOPLIST_KEY_CFBundleDisplayName = "George Is Looking Busy";
 				INFOPLIST_KEY_CFBundleIconName = AppIcon;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
-				INFOPLIST_KEY_NSAppleEventsUsageDescription = "George simulates mouse and keyboard activity that you configure.";
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "George Is Looking Busy simulates mouse and keyboard activity that you configure.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Oliver Maerz";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (

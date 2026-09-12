@@ -137,8 +137,8 @@ struct TextAction: Identifiable, Codable, Equatable, Hashable {
 }
 
 enum GeorgeBrand {
-    static let name = "George"
-    static let tagline = "Look busy the George way"
+    static let name = "George Is Looking Busy"
+    static let tagline = "He looks very busy."
     static let subtitle = "The Activity Simulator"
     static let bundleID = "com.lookbusy.george"
     static let licenseSummary = "Released under the MIT License."

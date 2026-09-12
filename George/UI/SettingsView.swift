@@ -175,7 +175,7 @@ private struct GeneralSettingsView: View {
                                 )
                             )
                     }
-                    Text("If George isn’t listed, click + and add the app shown in Finder. Enable the checkbox, then relaunch. Leave George quit while you toggle it — a running copy can switch it back off.")
+                    Text("If \(GeorgeBrand.name) isn’t listed, click + and add the app shown in Finder. Enable the checkbox, then relaunch. Leave the app quit while you toggle it — a running copy can switch it back off.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)

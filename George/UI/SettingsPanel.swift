@@ -19,7 +19,7 @@ final class SettingsPanel {
         }
 
         let window = NSWindow(contentViewController: hostingController(appState: appState))
-        window.title = "George Settings"
+        window.title = GeorgeBrand.name
         window.styleMask = [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView]
         window.titlebarAppearsTransparent = true
         window.titleVisibility = .hidden
