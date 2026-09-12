@@ -24,7 +24,7 @@ struct MenuBarView: View {
 
             if !appState.isTrusted {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Open Accessibility, add this George with +, enable it, then relaunch.")
+                    Text("Open Accessibility, add \(GeorgeBrand.name) with +, enable it, then relaunch.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
