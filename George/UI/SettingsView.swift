@@ -36,6 +36,7 @@ private struct SettingsStack<Content: View>: View {
 private struct GeneralSettingsView: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var settings: AppSettings
+    @State private var showingLicense = false
 
     var body: some View {
         SettingsStack {
@@ -197,6 +198,23 @@ private struct GeneralSettingsView: View {
                         .foregroundStyle(.tertiary)
                 }
             }
+
+            GlassSectionLabel(title: "Disclaimer")
+            GlassCard {
+                VStack(alignment: .leading, spacing: 12) {
+                    Text(GeorgeBrand.disclaimer)
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Button("View license…") {
+                        showingLicense = true
+                    }
+                    .georgeGlassButton()
+                }
+            }
+        }
+        .sheet(isPresented: $showingLicense) {
+            LicenseSheet()
         }
     }
 }
