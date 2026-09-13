@@ -16,7 +16,7 @@
       image.alt = button.getAttribute("data-alt") || "";
     });
   }
-
+  // Georgie boy! Get the TV reference?
   bindTabs(".menu-toggle", "menu-shot");
   bindTabs(".segmented", "tour-shot");
 
