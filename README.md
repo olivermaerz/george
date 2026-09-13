@@ -2,6 +2,8 @@
 
 He looks very busy.
 
+**Website:** [george.olivermaerz.com](https://george.olivermaerz.com/)
+
 A macOS menu bar app that simulates mouse and keyboard activity so you look busy. George waits until you are idle, then wanders the cursor, optionally clicks targets you pick, and can paste phrases you configure.
 
 ## Requirements
