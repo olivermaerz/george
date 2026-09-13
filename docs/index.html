@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>George Is Looking Busy</title>
+  <meta name="description" content="A macOS menu bar app that waits until you are idle, then wanders the cursor, clicks the spots you marked, and pastes the phrases you wrote.">
+  <meta name="theme-color" content="#111114">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta property="og:title" content="George Is Looking Busy">
+  <meta property="og:description" content="He looks very busy. A macOS activity simulator that lives in the menu bar.">
+  <meta property="og:image" content="images/icon.png">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top">
+      <img src="images/icon.png" width="36" height="36" alt="">
+      <span>George</span>
+    </a>
+    <nav>
+      <a href="#tour">The app</a>
+      <a href="#how">How it works</a>
+      <a href="https://github.com/olivermaerz/george">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Menu bar extra · macOS 14+</p>
+        <h1>George Is Looking Busy</h1>
+        <p class="tagline">He looks very busy.</p>
+        <p class="lede">
+          George waits until you actually go idle, then wanders the cursor,
+          clicks only the targets you pick, and pastes the phrases you
+          configure. Option-Shift-Esc if someone walks in.
+        </p>
+        <div class="ctas">
+          <a class="btn-arm" href="https://github.com/olivermaerz/george/releases">
+            <strong>Get George</strong>
+            <span>Download the latest release</span>
+          </a>
+          <a class="btn-quiet" href="https://github.com/olivermaerz/george">
+            <strong>View source</strong>
+            <span>MIT licensed on GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <svg class="wander" viewBox="0 0 420 340" aria-hidden="true">
+          <path class="wander-path" d="M36 270 C 110 60, 210 310, 390 88" fill="none"/>
+          <circle class="wander-dot" r="3.5" cx="0" cy="0"/>
+        </svg>
+        <div class="menu-stage">
+          <div class="menu-toggle" role="tablist" aria-label="Menu extra state">
+            <button type="button" id="tab-off" role="tab" aria-selected="true" aria-controls="menu-shot" data-src="images/menu-off.png" data-alt="George menu extra while off, with Arm and Start immediately buttons">Off</button>
+            <button type="button" id="tab-armed" role="tab" aria-selected="false" aria-controls="menu-shot" data-src="images/menu-armed.png" data-alt="George menu extra while armed, counting down to idle">Armed</button>
+          </div>
+          <img id="menu-shot" class="menu-shot" src="images/menu-off.png" width="326" height="410" alt="George menu extra while off, with Arm and Start immediately buttons">
+        </div>
+      </div>
+    </section>
+
+    <section class="tour" id="tour">
+      <div class="tour-copy">
+        <h2>Pick the spots. Write the lines. Walk away.</h2>
+        <p>
+          Movement is always on once George is armed. Clicks and text stay off
+          until you enable them. Nothing is clicked at random.
+        </p>
+      </div>
+
+      <div class="segmented" role="tablist" aria-label="Settings">
+        <button type="button" role="tab" aria-selected="true" aria-controls="tour-shot" data-src="images/settings-general.png" data-alt="General settings: idle timeout, mouse movement, ambient sounds, and Accessibility permission">General</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="tour-shot" data-src="images/settings-clicks.png" data-alt="Clicks settings: enable clicks, interval, and a marked click target">Clicks</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="tour-shot" data-src="images/settings-text.png" data-alt="Text settings: paste phrases at a marked spot, optionally pressing Enter">Text</button>
+      </div>
+
+      <figure class="window-stage">
+        <img id="tour-shot" src="images/settings-general.png" width="721" height="1024" alt="General settings: idle timeout, mouse movement, ambient sounds, and Accessibility permission">
+      </figure>
+    </section>
+
+    <section class="features" id="how">
+      <article>
+        <h3>Waits until you are idle</h3>
+        <p>George watches for real mouse and keyboard activity, then starts after the timeout you set. Arm it and leave. Or skip the wait and start immediately.</p>
+      </article>
+      <article>
+        <h3>Wanders on a cadence</h3>
+        <p>Steady every N seconds, or random waits between a min and max. The cursor moves because you armed him — not because a screensaver kicked in.</p>
+      </article>
+      <article>
+        <h3>Clicks only where you said</h3>
+        <p>Mark targets on screen. After a run of mouse moves, George clicks one of them — in order or at random among the list you made.</p>
+      </article>
+      <article>
+        <h3>Pastes your phrases</h3>
+        <p>Each text action clicks the spot you marked, pastes a line, and can press Enter. Handy for a recurring command in a terminal you already opened.</p>
+      </article>
+      <article>
+        <h3>Sounds like someone is there</h3>
+        <p>Optional typing bursts, the occasional hmm, a throat-clear. Toggle it from the menu extra without opening settings.</p>
+      </article>
+      <article>
+        <h3>Panic: Option-Shift-Esc</h3>
+        <p>One chord and George disarms. Grant Accessibility once, relaunch, and he is ready. macOS 14 or later.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>George Is Looking Busy · He looks very busy.</p>
+    <p>
+      <a href="https://github.com/olivermaerz/george">Source</a>
+      · MIT License
+      · <a href="https://github.com/olivermaerz">Oliver Maerz</a>
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
