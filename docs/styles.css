@@ -327,6 +327,90 @@ footer p { margin: 0 0 6px; }
 footer a { color: var(--muted); }
 footer a:hover { color: var(--text); }
 
+.disclaimer {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  max-width: 38rem;
+}
+
+.disclaimer h2 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.disclaimer p {
+  margin: 0 0 10px;
+  line-height: 1.55;
+}
+
+.license-open {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--orange);
+  font: inherit;
+  cursor: pointer;
+}
+
+.license-open:hover { text-decoration: underline; }
+
+.license-dialog {
+  width: min(36rem, calc(100vw - 32px));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  background: #1c1c1f;
+  color: var(--text);
+}
+
+.license-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.license-dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.license-dialog-head h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.license-close {
+  appearance: none;
+  border: 0;
+  border-radius: 10px;
+  padding: 6px 12px;
+  background: var(--quiet);
+  color: var(--text);
+  font: 600 13px/1.2 inherit;
+  cursor: pointer;
+}
+
+.license-text {
+  display: block;
+  width: 100%;
+  min-height: 18rem;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #111114;
+  color: var(--text);
+  font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+  resize: vertical;
+}
+
 @media (max-width: 860px) {
   .hero {
     grid-template-columns: 1fr;

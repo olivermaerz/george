@@ -83,12 +83,6 @@ final class AppState: ObservableObject {
     }
 
     func showAbout() {
-        AppActivation.revealForWindow()
-        NSApp.applicationIconImage = GeorgeBrand.appIcon()
-        NSApp.orderFrontStandardAboutPanel(options: [
-            .applicationName: GeorgeBrand.name,
-            .applicationIcon: GeorgeBrand.appIcon(),
-            .credits: GeorgeBrand.aboutCredits()
-        ])
+        AboutPanel.shared.show()
     }
 }

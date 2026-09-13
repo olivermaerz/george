@@ -19,4 +19,21 @@
 
   bindTabs(".menu-toggle", "menu-shot");
   bindTabs(".segmented", "tour-shot");
+
+  var dialog = document.getElementById("license-dialog");
+  if (dialog) {
+    document.querySelectorAll("[data-open-license]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        if (typeof dialog.showModal === "function") dialog.showModal();
+      });
+    });
+    document.querySelectorAll("[data-close-license]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        dialog.close();
+      });
+    });
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+  }
 })();
