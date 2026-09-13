@@ -13,6 +13,9 @@
       });
 
       image.src = button.getAttribute("data-src");
+      var srcset = button.getAttribute("data-srcset");
+      if (srcset) image.srcset = srcset;
+      else image.removeAttribute("srcset");
       image.alt = button.getAttribute("data-alt") || "";
     });
   }
