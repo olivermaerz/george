@@ -12,7 +12,16 @@
         tab.setAttribute("aria-selected", tab === button ? "true" : "false");
       });
 
-      image.src = button.getAttribute("data-src");
+      var src = button.getAttribute("data-src");
+      var picture = image.parentElement;
+      if (picture && picture.tagName === "PICTURE") {
+        picture.querySelectorAll("source").forEach(function (source) {
+          var type = source.getAttribute("type");
+          var next = type === "image/avif" ? src + ".avif" : src + ".webp";
+          source.srcset = next;
+        });
+      }
+      image.src = src + ".webp";
       image.alt = button.getAttribute("data-alt") || "";
     });
   }
