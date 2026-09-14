@@ -23,7 +23,7 @@ final class AboutPanel {
         window.titlebarAppearsTransparent = true
         window.isOpaque = false
         window.backgroundColor = .clear
-        window.setContentSize(NSSize(width: 440, height: 340))
+        window.setContentSize(NSSize(width: 480, height: 380))
         window.center()
         window.isReleasedWhenClosed = false
         window.identifier = NSUserInterfaceItemIdentifier("george-about")

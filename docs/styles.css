@@ -411,6 +411,60 @@ footer a:hover { color: var(--text); }
   resize: vertical;
 }
 
+.legal {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px 28px 48px;
+}
+
+.legal h1 {
+  margin: 0;
+}
+
+.legal-lede {
+  margin: 10px 0 0;
+  color: var(--orange);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.legal-sub {
+  margin: 12px 0 0;
+  max-width: 36rem;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.legal-sub .sep,
+.legal-block h2 .sep {
+  margin: 0 0.35rem;
+  color: var(--muted);
+  opacity: 0.55;
+}
+
+.legal-block {
+  max-width: 36rem;
+  margin: 32px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.legal-block h2 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.legal-block p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
 @media (max-width: 860px) {
   .hero {
     grid-template-columns: 1fr;

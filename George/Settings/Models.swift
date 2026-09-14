@@ -144,6 +144,25 @@ enum GeorgeBrand {
     static let disclaimer = """
     George is provided as-is, with no warranty of any kind. Nothing is guaranteed: not that it works, not that it is fit for any purpose, and not that using it is allowed where you use it. You use it entirely at your own risk. The authors are not liable for anything that happens.
     """
+    static let copyright = "Copyright © 2026 Oliver März"
+    static let imprintText = """
+    Legal Notice / Impressum
+
+    Information pursuant to § 5 DDG (German Digital Services Act)
+    Angaben gemäß § 5 DDG
+
+    Service provider / Diensteanbieter
+
+    Oliver März
+    c/o Online-Impressum 11008
+    Europaring 90
+    53757 Sankt Augustin
+    Germany / Deutschland
+
+    Contact / Kontakt
+
+    Email / E-Mail: lint.fiction1s@icloud.com
+    """
 
     static var licenseText: String {
         if let url = Bundle.main.url(forResource: "LICENSE", withExtension: "txt"),
