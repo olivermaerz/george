@@ -37,6 +37,7 @@ private struct GeneralSettingsView: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var settings: AppSettings
     @State private var showingLicense = false
+    @State private var showingImprint = false
 
     var body: some View {
         SettingsStack {
@@ -206,15 +207,23 @@ private struct GeneralSettingsView: View {
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
-                    Button("View license…") {
-                        showingLicense = true
+                    HStack(spacing: 8) {
+                        Button("View license…") {
+                            showingLicense = true
+                        }
+                        Button("Legal notice / Impressum…") {
+                            showingImprint = true
+                        }
                     }
                     .georgeGlassButton()
                 }
             }
         }
         .sheet(isPresented: $showingLicense) {
-            LicenseSheet()
+            LegalTextSheet(title: "License", text: GeorgeBrand.licenseText, monospaced: true)
+        }
+        .sheet(isPresented: $showingImprint) {
+            LegalTextSheet(title: "Legal notice / Impressum", text: GeorgeBrand.imprintText)
         }
     }
 }

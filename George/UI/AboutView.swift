@@ -1,12 +1,16 @@
 import SwiftUI
 
-struct LicenseSheet: View {
+struct LegalTextSheet: View {
+    let title: String
+    let text: String
+    var monospaced = false
+
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .firstTextBaseline) {
-                Text("License")
+                Text(title)
                     .font(.title2.weight(.semibold))
                 Spacer()
                 Button("Done") { dismiss() }
@@ -14,8 +18,8 @@ struct LicenseSheet: View {
                     .georgeGlassProminentButton()
             }
 
-            TextEditor(text: .constant(GeorgeBrand.licenseText))
-                .font(.system(size: 12, design: .monospaced))
+            TextEditor(text: .constant(text))
+                .font(monospaced ? .system(size: 12, design: .monospaced) : .body)
                 .scrollContentBackground(.hidden)
                 .textSelection(.enabled)
                 .frame(minHeight: 280)
@@ -28,7 +32,7 @@ struct LicenseSheet: View {
 }
 
 struct AboutView: View {
-    @State private var showingLicense = false
+    @State private var legalSheet: LegalSheetKind?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -43,6 +47,9 @@ struct AboutView: View {
                         .font(.title2.weight(.bold))
                     Text(GeorgeBrand.tagline)
                         .foregroundStyle(.secondary)
+                    Text(GeorgeBrand.copyright)
+                        .font(.caption)
+                        .foregroundStyle(.tertiary)
                 }
             }
 
@@ -51,19 +58,34 @@ struct AboutView: View {
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
 
-            HStack {
+            HStack(spacing: 8) {
                 Button("View license…") {
-                    showingLicense = true
+                    legalSheet = .license
                 }
                 .georgeGlassButton()
-                Spacer()
+                Button("Legal notice / Impressum…") {
+                    legalSheet = .imprint
+                }
+                .georgeGlassButton()
+                Spacer(minLength: 0)
             }
         }
         .padding(22)
-        .frame(width: 440)
+        .frame(width: 480)
         .background(VisualEffectBackdrop().ignoresSafeArea())
-        .sheet(isPresented: $showingLicense) {
-            LicenseSheet()
+        .sheet(item: $legalSheet) { sheet in
+            switch sheet {
+            case .license:
+                LegalTextSheet(title: "License", text: GeorgeBrand.licenseText, monospaced: true)
+            case .imprint:
+                LegalTextSheet(title: "Legal notice / Impressum", text: GeorgeBrand.imprintText)
+            }
         }
     }
+}
+
+private enum LegalSheetKind: String, Identifiable {
+    case license
+    case imprint
+    var id: String { rawValue }
 }
