@@ -2,7 +2,7 @@
 
 He looks very busy.
 
-Download the beta: [George.dmg](https://github.com/olivermaerz/george/releases/download/1.03-beta/George.dmg)
+[Download the beta](https://github.com/olivermaerz/george/releases)
 
 **Website:** [george.olivermaerz.com](https://george.olivermaerz.com/)
 
