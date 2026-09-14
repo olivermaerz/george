@@ -473,6 +473,32 @@ footer a:hover { color: var(--text); }
   line-height: 1.6;
 }
 
+.legal-block p + p,
+.legal-block p + ul,
+.legal-block ul + p {
+  margin-top: 12px;
+}
+
+.legal-policy {
+  max-width: 42rem;
+}
+
+.legal-policy .legal-block {
+  max-width: none;
+}
+
+.legal-policy ul {
+  margin: 10px 0 0;
+  padding-left: 1.2rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.legal-lang {
+  margin-top: 64px;
+  padding-top: 8px;
+}
+
 @media (max-width: 860px) {
   .hero {
     grid-template-columns: 1fr;

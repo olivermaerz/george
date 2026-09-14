@@ -27,4 +27,14 @@
       <image:caption>Paste phrases at a marked spot, optionally pressing Enter</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://george.olivermaerz.com/impressum.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://george.olivermaerz.com/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

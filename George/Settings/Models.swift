@@ -162,6 +162,7 @@ enum GeorgeBrand {
     Contact / Kontakt
 
     Email / E-Mail: lint.fiction1s@icloud.com
+    Phone / Telefon: +49 156 78612563
     """
 
     static var licenseText: String {
