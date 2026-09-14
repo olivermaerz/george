@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>George Is Looking Busy — macOS idle mouse and keyboard simulator</title>
-  <meta name="description" content="A macOS menu bar app that waits until you are idle, then wanders the cursor, clicks the spots you marked, and pastes the phrases you wrote.">
+  <title>George Is Looking Busy · macOS idle mouse and keyboard simulator</title>
+  <meta name="description" content="A macOS menu bar app that simulates mouse and keyboard activity after you go idle. Clicks and pastes only where you said.">
   <meta name="theme-color" content="#111114">
   <link rel="canonical" href="https://george.olivermaerz.com/">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preload" as="image" href="images/menu-armed.avif" type="image/avif">
   <meta property="og:title" content="George Is Looking Busy">
-  <meta property="og:description" content="He looks very busy. A macOS activity simulator that lives in the menu bar.">
+  <meta property="og:description" content="Simulates mouse and keyboard activity after you go idle. A macOS menu bar app.">
   <meta property="og:url" content="https://george.olivermaerz.com/">
   <meta property="og:image" content="https://george.olivermaerz.com/images/icon.png">
   <meta property="og:image:alt" content="George app icon: a cartoon mouse with glasses">
@@ -28,7 +29,29 @@
     "alternateName": "George",
     "url": "https://george.olivermaerz.com/",
     "image": "https://george.olivermaerz.com/images/icon.png",
-    "description": "A macOS menu bar app that waits until you are idle, then wanders the cursor, clicks targets you pick, and pastes phrases you configure.",
+    "screenshot": [
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://george.olivermaerz.com/images/menu-armed.webp",
+        "caption": "George Is Looking Busy menu extra while armed, counting down to idle"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://george.olivermaerz.com/images/settings-general.webp",
+        "caption": "General settings: idle timeout and mouse movement cadence"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://george.olivermaerz.com/images/settings-clicks.webp",
+        "caption": "Clicks settings: enable clicks, interval, and a marked click target"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://george.olivermaerz.com/images/settings-text.webp",
+        "caption": "Text settings: paste phrases at a marked spot, optionally pressing Enter"
+      }
+    ],
+    "description": "A macOS menu bar app that simulates mouse and keyboard activity after you go idle. Clicks and pastes only where you said.",
     "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "macOS 14",
     "softwareLicense": "https://opensource.org/licenses/MIT",
@@ -52,8 +75,8 @@
 
   <header class="nav">
     <a class="brand" href="#top">
-      <img src="images/icon.png" width="36" height="36" alt="">
-      <span>George</span>
+      <img src="images/icon-72.webp" width="36" height="36" alt="" decoding="async">
+      <span>George Is Looking Busy</span>
     </a>
     <nav>
       <a href="#tour">The app</a>
@@ -67,18 +90,17 @@
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Menu bar extra · macOS 14+</p>
+        <p class="eyebrow">macOS 14+ · He looks very busy.</p>
         <h1>George Is Looking Busy</h1>
-        <p class="tagline">He looks very busy.</p>
+        <p class="tagline">Simulates mouse and keyboard activity after you go idle.</p>
         <p class="lede">
-          George Is Looking Busy waits until you actually go idle, then wanders the cursor,
-          clicks only the targets you pick, and pastes the phrases you
-          configure. Option-Shift-Esc if someone walks in.
+          George lives in the menu bar. When you stop using the Mac, he moves the cursor
+          and can click or paste only where you said. Option-Shift-Esc if someone walks in.
         </p>
         <div class="ctas">
           <a class="btn-arm" href="https://github.com/olivermaerz/george/releases">
-            <strong>Get George Is Looking Busy</strong>
-            <span>Download the latest release</span>
+            <strong>Download George</strong>
+            <span>Latest release · macOS 14+</span>
           </a>
           <a class="btn-quiet" href="https://github.com/olivermaerz/george">
             <strong>View source</strong>
@@ -94,58 +116,66 @@
         </svg>
         <div class="menu-stage">
           <div class="menu-toggle" role="tablist" aria-label="Menu extra state">
-            <button type="button" id="tab-off" role="tab" aria-selected="true" aria-controls="menu-shot" data-src="images/menu-off.png" data-alt="George menu extra while off, with Arm and Start immediately buttons">Off</button>
-            <button type="button" id="tab-armed" role="tab" aria-selected="false" aria-controls="menu-shot" data-src="images/menu-armed.png" data-alt="George menu extra while armed, counting down to idle">Armed</button>
+            <button type="button" id="tab-off" role="tab" aria-selected="false" aria-controls="menu-shot" data-src="images/menu-off" data-alt="George Is Looking Busy menu extra while off, with Arm and Start immediately buttons">Off</button>
+            <button type="button" id="tab-armed" role="tab" aria-selected="true" aria-controls="menu-shot" data-src="images/menu-armed" data-alt="George Is Looking Busy menu extra while armed, counting down to idle">Armed</button>
           </div>
-          <img id="menu-shot" class="menu-shot" src="images/menu-off.png" width="326" height="410" alt="George menu extra while off, with Arm and Start immediately buttons">
+          <picture>
+            <source type="image/avif" srcset="images/menu-armed.avif">
+            <source type="image/webp" srcset="images/menu-armed.webp">
+            <img id="menu-shot" class="menu-shot" src="images/menu-armed.webp" width="652" height="820" alt="George Is Looking Busy menu extra while armed, counting down to idle" fetchpriority="high" decoding="async">
+          </picture>
         </div>
       </div>
     </section>
 
     <section class="tour" id="tour">
       <div class="tour-copy">
-        <h2>Pick the spots. Write the lines. Walk away.</h2>
+        <h2>He waits. Then he moves the mouse.</h2>
         <p>
-          Movement is always on once George Is Looking Busy is armed. Clicks and text stay off
+          Movement is always on once George is armed. Clicks and text stay off
           until you enable them. Nothing is clicked at random.
         </p>
       </div>
 
       <div class="segmented" role="tablist" aria-label="Settings">
-        <button type="button" role="tab" aria-selected="true" aria-controls="tour-shot" data-src="images/settings-general.png" data-alt="General settings: idle timeout, mouse movement, ambient sounds, and Accessibility permission">General</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="tour-shot" data-src="images/settings-clicks.png" data-alt="Clicks settings: enable clicks, interval, and a marked click target">Clicks</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="tour-shot" data-src="images/settings-text.png" data-alt="Text settings: paste phrases at a marked spot, optionally pressing Enter">Text</button>
+        <button type="button" role="tab" aria-selected="true" aria-controls="tour-shot" data-src="images/settings-general" data-alt="George Is Looking Busy General settings: idle timeout and mouse movement cadence">General</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="tour-shot" data-src="images/settings-clicks" data-alt="George Is Looking Busy Clicks settings: enable clicks, interval, and a marked click target">Clicks</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="tour-shot" data-src="images/settings-text" data-alt="George Is Looking Busy Text settings: paste phrases at a marked spot, optionally pressing Enter">Text</button>
       </div>
 
       <figure class="window-stage">
-        <img id="tour-shot" src="images/settings-general.png" width="721" height="1024" alt="General settings: idle timeout, mouse movement, ambient sounds, and Accessibility permission">
+        <picture>
+          <source type="image/avif" srcset="images/settings-general.avif">
+          <source type="image/webp" srcset="images/settings-general.webp">
+          <img id="tour-shot" src="images/settings-general.webp" width="956" height="965" alt="George Is Looking Busy General settings: idle timeout and mouse movement cadence" loading="lazy" decoding="async">
+        </picture>
       </figure>
     </section>
 
     <section class="features" id="how">
       <article>
         <h3>Waits until you are idle</h3>
-        <p>George Is Looking Busy watches for real mouse and keyboard activity, then starts after the timeout you set. Arm it and leave. Or skip the wait and start immediately.</p>
+        <p>Arm him and walk away. George watches for real mouse and keyboard use, then starts after the timeout you set. Or skip the wait and start immediately.</p>
       </article>
       <article>
-        <h3>Wanders on a cadence</h3>
-        <p>Steady every N seconds, or random waits between a min and max. The cursor moves because you armed him — not because a screensaver kicked in.</p>
+        <h3>Moves the mouse</h3>
+        <p>Every N seconds, or a random wait. The cursor moves because you armed him, not because a screensaver kicked in.</p>
       </article>
       <article>
         <h3>Clicks only where you said</h3>
-        <p>Mark targets on screen. After a run of mouse moves, George Is Looking Busy clicks one of them — in order or at random among the list you made.</p>
+        <p>You mark the spots. After a run of mouse moves, George clicks one of them, in order or at random. He only clicks what you added.</p>
       </article>
       <article>
         <h3>Pastes your phrases</h3>
-        <p>Each text action clicks the spot you marked, pastes a line, and can press Enter. Handy for a recurring command in a terminal you already opened.</p>
+        <p>Clicks the spot you marked, pastes a line, can press Enter. Handy for a command in a terminal you already opened.</p>
       </article>
       <article>
         <h3>Sounds like someone is there</h3>
-        <p>Optional typing bursts, the occasional hmm, a throat-clear. Toggle it from the menu extra without opening settings.</p>
+        <p>Typing bursts, the occasional hmm, a throat-clear. Optional. Toggle it from the menu extra.</p>
       </article>
       <article>
         <h3>Panic: Option-Shift-Esc</h3>
-        <p>One chord and George Is Looking Busy disarms. Grant Accessibility once, relaunch, and he is ready. macOS 14 or later.</p>
+        <p>Someone walks in. Option-Shift-Esc and George disarms.</p>
       </article>
     </section>
   </main>
