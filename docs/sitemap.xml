@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://george.olivermaerz.com/</loc>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://george.olivermaerz.com/images/menu-armed.webp</image:loc>
+      <image:title>George Is Looking Busy menu extra</image:title>
+      <image:caption>Menu extra while armed, counting down to idle</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://george.olivermaerz.com/images/settings-general.webp</image:loc>
+      <image:title>George Is Looking Busy General settings</image:title>
+      <image:caption>Idle timeout and mouse movement cadence</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://george.olivermaerz.com/images/settings-clicks.webp</image:loc>
+      <image:title>George Is Looking Busy Clicks settings</image:title>
+      <image:caption>Enable clicks, interval, and a marked click target</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://george.olivermaerz.com/images/settings-text.webp</image:loc>
+      <image:title>George Is Looking Busy Text settings</image:title>
+      <image:caption>Paste phrases at a marked spot, optionally pressing Enter</image:caption>
+    </image:image>
   </url>
 </urlset>
