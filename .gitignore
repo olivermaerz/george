@@ -1,4 +1,4 @@
-# macOS
+# Mac stuff
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -9,14 +9,14 @@
 .TemporaryItems
 Icon?
 
-# Xcode user state (personal paths, window layout — not for GitHub)
+# Xcode user stuff
 xcuserdata/
 *.xcuserstate
 *.xccheckout
 *.xcscmblueprint
 *.xcuserdatad/
 
-# Xcode / Swift build products
+# Xcode / Swift build stuff
 build/
 DerivedData/
 *.hmap
@@ -28,11 +28,11 @@ DerivedData/
 .build/
 .swiftpm/
 
-# Playgrounds
+# Playground stuff
 timeline.xctimeline
 playground.xcworkspace
 
-# Legacy Xcode user files
+# Legacy Xcode stuff
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -42,12 +42,12 @@ playground.xcworkspace
 *.perspectivev3
 !default.perspectivev3
 
-# Distribution binaries (rebuild from source; do not commit)
+# Distribution stuff
 *.app
 *.dmg
 *.pkg
 
-# Apple code signing, provisioning, notarization
+# Signing stuff
 # GitHub forbids private keys; Apple forbids redistributing these.
 *.p12
 *.pfx
@@ -69,7 +69,7 @@ notarization/
 *.storekit
 ExportOptions.plist
 
-# Secrets and credentials
+# Environment stuff
 .env
 .env.*
 !.env.example
@@ -80,22 +80,25 @@ id_rsa
 id_ed25519
 *.keystore
 
-# Fastlane output
+# Fastlane stuff
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 fastlane/README.md
 
-# Python
+# Python stuff
 __pycache__/
 *.py[cod]
 .venv/
 venv/
 
-# Editors / local tooling
+# IDE stuff
 .idea/
 *.swp
 *~
 .vscode/
 .cursor/
+
+# Project specific stuff
+George/Resources/Sounds/qta/

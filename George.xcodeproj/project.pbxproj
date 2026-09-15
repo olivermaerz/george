@@ -13,10 +13,41 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A10000000000000000000010 /* George */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A10000000000000000000050 /* Exceptions for "George" folder in "George" target */,
+			);
 			path = George;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A10000000000000000000050 /* Exceptions for "George" folder in "George" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Resources/Sounds/qta/hmm01.qta",
+				"Resources/Sounds/qta/hmm02.qta",
+				"Resources/Sounds/qta/hmm03.qta",
+				"Resources/Sounds/qta/hmm04.qta",
+				"Resources/Sounds/qta/hmm05.qta",
+				"Resources/Sounds/qta/hmm06.qta",
+				"Resources/Sounds/qta/hmm07.qta",
+				"Resources/Sounds/qta/thoat01.qta",
+				"Resources/Sounds/qta/throat01.qta",
+				"Resources/Sounds/qta/throat02.qta",
+				"Resources/Sounds/qta/throat03.qta",
+				"Resources/Sounds/qta/throat04.qta",
+				"Resources/Sounds/qta/typing01.qta",
+				"Resources/Sounds/qta/typing02.qta",
+				"Resources/Sounds/qta/typing03.qta",
+				"Resources/Sounds/qta/typing04.qta",
+				"Resources/Sounds/qta/typing05.qta",
+				"Resources/Sounds/qta/typing06.qta",
+				"Resources/Sounds/qta/typing07.qta",
+			);
+			target = A10000000000000000000002 /* George */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A10000000000000000000021 /* Frameworks */ = {

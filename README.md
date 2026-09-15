@@ -21,12 +21,6 @@ A macOS menu bar app that simulates mouse and keyboard activity so you look busy
 
 Open `George.xcodeproj` in Xcode and run the George scheme.
 
-Ambient typing and “hmm” samples can be regenerated with:
-
-```sh
-python3 scripts/generate_sounds.py
-```
-
 ## Usage
 
 1. Grant Accessibility, then relaunch George Is Looking Busy.

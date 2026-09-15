@@ -42,6 +42,8 @@ struct AboutView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 64, height: 64)
                     .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                    .contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                    .onTapGesture { AlternativeLicense.consider() }
                 VStack(alignment: .leading, spacing: 3) {
                     Text(GeorgeBrand.name)
                         .font(.title2.weight(.bold))
