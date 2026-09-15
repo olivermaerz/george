@@ -10,6 +10,34 @@
 		A10000000000000000000003 /* George.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = George.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A10000000000000000000050 /* Exceptions for "George" folder in "George" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Sounds/qta/hmm01.qta,
+				Resources/Sounds/qta/hmm02.qta,
+				Resources/Sounds/qta/hmm03.qta,
+				Resources/Sounds/qta/hmm04.qta,
+				Resources/Sounds/qta/hmm05.qta,
+				Resources/Sounds/qta/hmm06.qta,
+				Resources/Sounds/qta/hmm07.qta,
+				Resources/Sounds/qta/thoat01.qta,
+				Resources/Sounds/qta/throat01.qta,
+				Resources/Sounds/qta/throat02.qta,
+				Resources/Sounds/qta/throat03.qta,
+				Resources/Sounds/qta/throat04.qta,
+				Resources/Sounds/qta/typing01.qta,
+				Resources/Sounds/qta/typing02.qta,
+				Resources/Sounds/qta/typing03.qta,
+				Resources/Sounds/qta/typing04.qta,
+				Resources/Sounds/qta/typing05.qta,
+				Resources/Sounds/qta/typing06.qta,
+				Resources/Sounds/qta/typing07.qta,
+			);
+			target = A10000000000000000000002 /* George */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A10000000000000000000010 /* George */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -20,34 +48,6 @@
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A10000000000000000000050 /* Exceptions for "George" folder in "George" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Resources/Sounds/qta/hmm01.qta",
-				"Resources/Sounds/qta/hmm02.qta",
-				"Resources/Sounds/qta/hmm03.qta",
-				"Resources/Sounds/qta/hmm04.qta",
-				"Resources/Sounds/qta/hmm05.qta",
-				"Resources/Sounds/qta/hmm06.qta",
-				"Resources/Sounds/qta/hmm07.qta",
-				"Resources/Sounds/qta/thoat01.qta",
-				"Resources/Sounds/qta/throat01.qta",
-				"Resources/Sounds/qta/throat02.qta",
-				"Resources/Sounds/qta/throat03.qta",
-				"Resources/Sounds/qta/throat04.qta",
-				"Resources/Sounds/qta/typing01.qta",
-				"Resources/Sounds/qta/typing02.qta",
-				"Resources/Sounds/qta/typing03.qta",
-				"Resources/Sounds/qta/typing04.qta",
-				"Resources/Sounds/qta/typing05.qta",
-				"Resources/Sounds/qta/typing06.qta",
-				"Resources/Sounds/qta/typing07.qta",
-			);
-			target = A10000000000000000000002 /* George */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A10000000000000000000021 /* Frameworks */ = {
@@ -216,7 +216,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = G46JV57B9Q;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -232,8 +232,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = "1.04 beta";
-				PRODUCT_BUNDLE_IDENTIFIER = com.berlinco.george;
+				MARKETING_VERSION = "1.0.5 beta";
+				PRODUCT_BUNDLE_IDENTIFIER = com.olivermaerz.george;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -250,7 +250,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = G46JV57B9Q;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -266,8 +266,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = "1.04 beta";
-				PRODUCT_BUNDLE_IDENTIFIER = com.berlinco.george;
+				MARKETING_VERSION = "1.0.5 beta";
+				PRODUCT_BUNDLE_IDENTIFIER = com.olivermaerz.george;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
